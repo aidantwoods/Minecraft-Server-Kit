@@ -4,6 +4,6 @@ popd > /dev/null
 
 [ -d $DIR'/worlds' ] || mkdir $DIR'/worlds'
 
-export $UID=$(id -u)
+export _UID=$(id -u)
 
-sudo mount -t vboxsf -o uid=$UID,gid=$UID worlds $DIR/worlds/
+sudo mount -t vboxsf -o uid=$_UID,gid=$_UID worlds $DIR/worlds/
