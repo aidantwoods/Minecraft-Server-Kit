@@ -12,7 +12,7 @@ RUN export URL=$(curl https://minecraft.net/en-us/download/server -L | grep .jar
 FROM ubuntu
 
 RUN apt-get update \
-  && apt-get install -y openjdk-8-jdk curl
+  && apt-get install -y openjdk-8-jdk
 
 COPY --from=download /server/* /server/
 
